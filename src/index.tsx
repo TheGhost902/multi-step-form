@@ -8,8 +8,8 @@ import { Input } from './components/Input'
 
 render(
     <Form returnValue={console.log}>
-        <Input name="first_name" text="Your first name:"/>
-        <Input name="last_name" text="Your last name:"/>
+        <Input name="first_name" text="First name:"/>
+        <Input name="last_name" text="Last name:"/>
         <SubmitSection/>
     </Form>,
     document.getElementById('root')

@@ -1,0 +1,48 @@
+.input {
+    padding: 20px 10px 5px;
+    position: relative;
+
+    &__text {
+        position: absolute;
+        max-width: 170px;
+
+        transform: translate(12px, 12px);
+        overflow: hidden;
+
+        font-size: 1.2rem;
+        white-space: nowrap;
+        color: #999;
+
+        transition: all .1s linear;
+
+        pointer-events: none;
+    }
+
+    &__text_focus {
+        transform: translate(12px, -18px);
+
+        font-size: 14px;
+        color: inherit;
+    }
+
+    &__field {
+        display: block;
+        box-sizing: border-box;
+        width: 100%;
+        min-width: 200px;
+        padding: 10px;
+
+        border: 2px solid #75baff;
+        border-radius: 5px;
+        outline: none;
+
+        font-family: inherit;
+        font-size: 1.2rem;
+
+        transition: border-color .1s linear;
+
+        &:active, &:focus {
+            border-color: #75ffa5;
+        }
+    }
+}
