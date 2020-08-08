@@ -1,19 +1,19 @@
 import React from 'react'
 
 interface State {
-    firstName: string
-    secondName: string
-    email: string
+    // firstName: string
+    // secondName: string
+    // email: string
 }
 
 const initState: State = {
-    firstName: '',
-    secondName: '',
-    email: ''
+    // firstName: '',
+    // secondName: '',
+    // email: ''
 }
 
 interface ContextType {
-    state: State
+    state: any
     setState: (statePart: {}) => void
 }
 
