@@ -1,16 +1,6 @@
 import React from 'react'
 
-interface State {
-    // firstName: string
-    // secondName: string
-    // email: string
-}
-
-const initState: State = {
-    // firstName: '',
-    // secondName: '',
-    // email: ''
-}
+import './Form.scss'
 
 interface ContextType {
     state: any
@@ -21,11 +11,11 @@ export const StateContext = React.createContext<ContextType | undefined>(undefin
 
 interface FormProps {
     children: React.ReactNode
-    returnValue: (state: State) => void
+    returnValue: (state: {}) => void
 }
 
 export function Form({ children, returnValue }: FormProps) {
-    const [state, setState] = React.useState(initState)
+    const [state, setState] = React.useState({})
 
     function updateState(statePart: {}) {
         setState({

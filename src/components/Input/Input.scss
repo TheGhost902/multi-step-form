@@ -1,3 +1,6 @@
+@import '../colors';
+@import '../common';
+
 .input {
     padding: 20px 10px 5px;
     position: relative;
@@ -11,18 +14,18 @@
 
         font-size: 1.2rem;
         white-space: nowrap;
-        color: #999;
+        color: $light-gray;
 
         transition: all .1s linear;
 
         pointer-events: none;
-    }
 
-    &__text_focus {
-        transform: translate(12px, -18px);
+        &_focus {
+            transform: translate(12px, -18px);
 
-        font-size: 14px;
-        color: inherit;
+            font-size: 14px;
+            color: inherit;
+        }
     }
 
     &__field {
@@ -32,9 +35,8 @@
         min-width: 200px;
         padding: 10px;
 
-        border: 2px solid #75baff;
-        border-radius: 5px;
-        outline: none;
+        @include border($light-blue);
+        background-color: inherit;
 
         font-family: inherit;
         font-size: 1.2rem;
@@ -42,7 +44,7 @@
         transition: border-color .1s linear;
 
         &:active, &:focus {
-            border-color: #75ffa5;
+            border-color: $light-green;
         }
     }
 }

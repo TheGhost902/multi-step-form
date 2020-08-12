@@ -14,6 +14,12 @@ export function Input(props: InputProps) {
     const [focus, setFocus] = React.useState(false)
     const value: string | undefined = context?.state[props.name]
 
+    React.useEffect(() => {
+        if (value === undefined) {
+            context?.setState({[props.name]: ''})
+        }
+    }, [props.name, context, value])
+
     function changeHandler(e: React.ChangeEvent<HTMLInputElement>) {
         context?.setState({[props.name]: e.target.value})
     }
@@ -26,7 +32,6 @@ export function Input(props: InputProps) {
             setFocus(false)
         }
     }
-
     
     return (
         <div className="input">

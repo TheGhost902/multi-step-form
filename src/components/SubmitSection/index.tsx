@@ -1,9 +1,15 @@
 import React from 'react'
 
-export function SubmitSection() {
+import './SubmitSection.scss'
+
+interface SubmitSectionProps {
+    text?: string
+}
+
+export function SubmitSection({ text = 'Send' }: SubmitSectionProps) {
     return (
         <div className="submit-section">
-            <button type="submit">Send</button>
+            <button type="submit">{text}</button>
         </div>
     )
 }
